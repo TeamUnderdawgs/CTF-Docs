@@ -2,6 +2,10 @@
 
 Archive and detailed documentation of Team UnderDawgs participation in past CTFs.
 
+# Format
+
+Use [format.md](https://github.com/TeamUnderdawgs/CTF-Docs/blob/master/format.md)
+
 # Motivation
 
 	- Accountability
