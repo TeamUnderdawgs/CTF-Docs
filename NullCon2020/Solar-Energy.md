@@ -33,5 +33,3 @@ In a nutshell:
 References:
 1. https://www.youtube.com/watch?v=xf2E64o4hWc
 2. https://github.com/veracode-research/solr-injection#introduction
-
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/9cwzky1/Untitled-Diagram.png" alt="Untitled-Diagram" border="0"></a>
