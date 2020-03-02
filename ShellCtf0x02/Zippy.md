@@ -5,8 +5,9 @@
 
 > There was a zip file provided which is archieved using different compressed containers and archievers in a sequence.
 
-![alt text](/images/zip.png)
-```
+![alt text](images/zip.png)
+
+
 #### Solved?
 
 Yes
