@@ -33,6 +33,6 @@ Yes
 *  Now after breaking we got this link at end bit.ly/chhhcooh which opened  a page which asked us key clearly the key was
 `divyanshu` which was used to encrypt it, entering the key gave us the flag :
 
-![alt text](images/a4.png)
+![alt text](images/a5.png)
 
 ` shellctf{ch3mistry_is_myst3ry}`
