@@ -14,7 +14,7 @@ Yes
 
 #### Tried:
 
-*In this challenge we had  a zip file at first extract it would give you a simple file which was filled with binary on a closer inspection of file
+* In this challenge we had  a zip file at first extract it would give you a simple file which was filled with binary on a closer inspection of file
 
 ![alt text](images/hflag.png)
 
