@@ -109,8 +109,7 @@ And boom !
 The payload is equivalent to:
 
 ```
-Function(a, "with(par)return constructor(a)"){
-}("return flag")()
+Function(a, "with(par)return constructor(a)")("return flag")()
 ```
 
 Really Loved this challenge, Another lesson that in good ctfs, everything is usable.
