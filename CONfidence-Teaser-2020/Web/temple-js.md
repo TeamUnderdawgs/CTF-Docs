@@ -109,8 +109,7 @@ And boom !
 The payload is equivalent to:
 
 ```
-Function(a){
-	with(par)return constructor(a)
+Function(a, "with(par)return constructor(a)"){
 }("return flag")()
 ```
 
