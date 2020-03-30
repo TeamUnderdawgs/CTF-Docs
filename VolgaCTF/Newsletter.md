@@ -34,15 +34,15 @@ as the user's name and try to render in the template with any sanitization.
 
 As soon as we saw usage of Twig we had intuition of Template Injection in our heads but we had some obstacles to face.
 1) FILTER_VALIDATE_EMAIL which would check for the validity of the email address.I stumbled upon a good StackOverflow thread where some
-details were shed on what chars are permitted even after using the function and was mentioned that within double quotes ["] almost every character
-is allowed which I just overlooked for no reason.
+details were shed on what chars are permitted even after using the function and was mentioned that **within double quotes ["] almost every character
+is allowed** which I just overlooked for no reason.
 
 **Ref:- https://stackoverflow.com/questions/19220158/php-filter-validate-email-does-not-work-correctly**
 
 2) Twig was using newer version and no such information was there on the Internet about it's exploitation and because I totally missed the usage of 
 Double quotes I was stuck with not using [(] opening and closing brackets which made it hard for me.
 
-I read Documentation and landed up on few filters but wasn't able to use them because of my intuition about brackets being blocked.
+I read Documentation and landed up on few filters but wasn't able to use them because of my **intuition about brackets being blocked.**
 
 #### What are filters anyway?
 
