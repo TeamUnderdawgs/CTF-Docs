@@ -21,6 +21,7 @@ failed with no result next i decided to run a nmap scan over the host with port 
  ```
  
 ![Scan output](alternate.png)
+here we can see that the SAN Subject Alternative Name was carrying our flag with itself the challenge catch was hiding in the word alternate and where most people got confused.
 
 and finally our flag was 
 
