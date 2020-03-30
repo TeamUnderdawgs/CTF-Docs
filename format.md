@@ -18,7 +18,7 @@
 #### Solutions:
 
  - If Solved:
- 	- Mention what efficient ot different ways other teams used.
+ 	- Mention what efficient or different ways other teams used.
  - Else:
  	- Describe every possible solution used by different teams.
  	- Links to their writeups.
