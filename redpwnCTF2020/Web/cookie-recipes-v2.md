@@ -29,7 +29,9 @@ curl --path-as-is https://cookie-recipes-v2.2020.redpwnc.tf/../../../../../../..
 
 2. By IDOR on `GET /api/userInfo?id=0` you get the password and data of admin.
 
-3. Observer that app is vuln to CSRF by "Content-Type","text/plain"
+3. Observe that app is vuln to CSRF by "Content-Type","text/plain", we can CSRF the request of gift granting now because we have password avaiable from IDOR too. But a user can only be granted once. 
+
+3.2 Race condition comes to rescue.
 
 4. Now by Making admin bot visit our site with CSRF exploit code:
 
