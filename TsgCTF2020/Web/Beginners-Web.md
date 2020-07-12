@@ -150,7 +150,7 @@ In the first request, We just assign the callback and the Promise does not gets 
 In the second consecutive request, The code 
 ```converters[`FLAG_${request.session.sessionId}`] = flagConverter;```
 
-will assign the value `flagConverter` function to our unique key for which we have set a callback, this callback function will get passed down to callback as error and Our Promise will get rejected and the result gets assign with an the whole function, and this result gets spit out in response to our first request which was waiting for this to happen.
+will assign the value `flagConverter` function to our unique key for which we have set a callback, this `flagConverter` function will get passed down to callback as error and Our Promise will get rejected and the result gets assign with the whole function, and this result gets spit out in response to our first request which was waiting for this to happen.
 
 Peace.
 
