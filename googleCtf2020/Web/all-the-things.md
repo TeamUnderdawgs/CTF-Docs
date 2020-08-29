@@ -62,8 +62,8 @@ to get arbitrary HTMLi first, we dont have prototype pollution to the rescue,The
 We need to use "document.all" which is undefined but still exists!!
 then again after Arbitrary xss, we use CSP bypasses to the rescue.
 
-https://github.com/zoeyg/public-write-ups/blob/master/googlectf-2020/all-the-little-things.md
-https://blog.s1r1us.ninja/CTF/IuseBing
+- https://github.com/zoeyg/public-write-ups/blob/master/googlectf-2020/all-the-little-things.md
+- https://blog.s1r1us.ninja/CTF/IuseBing
 
 
 
