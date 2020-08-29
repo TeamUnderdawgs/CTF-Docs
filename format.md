@@ -4,7 +4,7 @@
 
 #### Solved?
 
- -Yes/No
+ - Yes/No
 
 #### Tried:
 
